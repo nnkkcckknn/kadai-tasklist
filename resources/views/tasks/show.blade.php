@@ -8,6 +8,9 @@
             <td>{{ $tasks->id }}</td>
         </tr>
         <tr>
+            <th>atatus</th>
+            <td>{{ $tasks->status }}</td>
+        <tr>
             <th>メッセージ</th>
             <td>{{ $tasks->content }}</td>
         </tr>
@@ -16,4 +19,4 @@
     {!! Form::model($tasks , ['route' => ['tasks.destroy', $tasks->id ], 'method' => 'delete']) !!}
         {!! Form::submit('削除', ['class' => 'btn btn-danger']) !!}
     {!! Form::close() !!}
-    @endsection
+@endsection
